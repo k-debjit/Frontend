@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css?family=Rubik:300,500,900i');
+
+@keyframes fadein{
+	0%{
+		opacity: 0;
+	}
+	100%{
+		opacity: 1;
+	}
+}
+
+body {
+	font-family: "Rubik", Arial;
+	font-size: 18px;
+	line-height: 1.5;
+	font-weight: 300;
+	
+	background-color: #ffffff;
+	color: #052837;
+}
+
+header{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background-color: #c7f2f1;
+	z-index: 1;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 48px 0 48px;
+	height: 64px;
+	transition: background-color 1s, height 1s;
+	
+}
+
+/*this class is only at css*/
+header.scrolled{
+	background-color: #ffffff;
+	height: 100px;
+}
+
+header h1, header nav{
+	flex: 1;/*he size of all of the other elements will have the same width as their content, but the element with flex: 1 will have the remaining full space given to it*/
+}
+
+header nav{
+	text-align: right;
+}
+
+header a {
+	margin: 0 0 0 15px;
+}
+
+div.face{
+position: relative;
+}
+
+div.iris{
+	position: absolute;
+	top: 23px;
+	left: 11px;
+	}
+
+div.iris-right{
+	left: 49px;
+}
+
+div.iris div{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 6px;
+	height: 6px;
+	background-color: #052837;
+	border-radius: 3px;
+	transform: translate(-50%, -50%) ;
+}
+
+h1 {
+	font-size: 24px;
+	font-weight: 900;
+	font-style: italic;
+}
+
+
+h2{
+	font-size: 48px;
+	font-weight: 500;
+	line-height: 1.25;
+}
+
+h3{
+	font-size: 32px;
+	font-weight: 500;
+	line-height: 1.25;
+}
+
+a{
+	color: #052837;
+	text-decoration: none;
+}
+
+a.button{
+	display: inline-block;
+	background-color: #052837;
+	color: #ffffff;
+	border-radius: 50px;
+	padding: 0.5em 1.5em 0.5em 1.5em;/* Half of the height of the text.current font size is 18px*/
+}
+
+p{
+	margin: 1.5em 0 1.5em 0;
+}
+
+section.hero{
+	margin: 64px 0 0 0;
+	padding: 160px 48px 160px 48px;
+	background-color: #c7f2f1;
+	background-image: url(hero.jpg);
+	background-size: contain;/*fills the space with image*/
+	background-repeat: no-repeat;
+	background-position: 100% 50%;/*100% across the page and 50% in the middle */
+}
+
+section.hero h2, section.hero P{
+	max-width: 450px;
+}
+
+section.content{
+	margin: 48px;
+	display: flex;
+	flex-direction: row;
+}
+
+section.content div.content{
+	flex: 0 0 400px;/* do not grow, do not shrink, be for 400px*/
+	margin: 0 0 0 48px;
+}
+
+section.content:nth-child(odd){
+	flex-direction: row-reverse;
+}
+
+section.content:nth-child(odd) div.content{
+	margin: 0 48px 0 0;
+}
+

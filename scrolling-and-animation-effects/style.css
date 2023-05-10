@@ -1,0 +1,217 @@
+body {
+    font-family: 'LunchType-Regular', sans-serif;
+    font-size: 18px;
+    line-height: 1.5;
+  }
+  
+  .section {
+    min-height: 100vh;
+    /* This enables flexbox and it also 
+      initates margin instruction */
+    display: flex;
+  }
+  
+  /* this class only adds padding to our sections */
+  .section-pad {
+    padding-left: 5vw;
+    padding-right: 5vw;
+  }
+  
+  .container {
+    max-width: 810px;
+    /* margin alone cannot place the tags. display should also be flex*/
+    /* margin auto not only places the tags
+      horizontally center but also vertically 
+      center*/
+    margin: auto;
+  }
+  
+  .intro {
+    background-image: url('intro.jpg');
+    color: white;
+  }
+  
+  .intro p {
+    font-size: 36px;
+    line-height: 1.2;
+  }
+  
+  .logo {
+    /* To change inside a tag, display needs to be
+      configured again*/
+    display: block;
+    text-align: center;
+    margin-bottom: 32px;
+    max-width: 112px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .logo img {
+    width: 100%;
+  }
+  
+  .bg-cover {
+    background-size: cover;
+    background-position: position;
+    background-repeat: no-repeat;
+  }
+  
+  @keyframes fadeIn {
+    /* We are defining what change will take place when
+    animation is 0% complete*/
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+  /* We are defining what change will take place when
+    animation is 50% complete*/
+    50% {
+      transform: translate(0);
+    }
+  /* We are defining what change will take place when
+    animation is 100% complete*/
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  .appear {
+    /* here we set the opacity as a starting point*/
+    opacity: 0;
+    /*we include the animation name*/
+    animation-name: fadeIn;
+    /**/
+    animation-duration: 3s;
+    animation-delay: 2s;
+    /* this will make sure, after 100% stage, end state
+      stays the same */
+    animation-fill-mode: forwards;
+  }
+  
+  .marquee {
+    /* absolute position gives it a different layer and also related to section*/
+    position: absolute;
+    top: 3vh;
+    left: 0;
+    width: 100%;
+    /* each letter will be 5% of the viewport width*/
+    font-size: 5vw;
+    line-height: 1;
+    /* this will stop the long text from causing scroll bars by hanging
+      outside of the marquee box area*/
+    overflow: hidden;
+  }
+  
+  .marquee span {
+    /* this is the shorthand version of the animation css rule*/
+    animation: moveLeft 200s infinite;
+    /*Ensures text stays all on the same line*/
+    white-space: nowrap;
+    /*span is inline by default, so we tell it to block*/
+    display: block;
+    /* this will let us add out animation*/
+    position: relative;
+  }
+  
+  @keyframes moveLeft {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-300vw);
+    }
+  }
+  
+  .mix-difference {
+    /*allows us to mix the current layer's style/colour with that of what's
+      behind it to create some really cool effects*/
+    mix-blend-mode: difference;
+  }
+  
+  .day-1 {
+    background-color: #c21253e3;
+  }
+  
+  .day-2{
+    background-color: #08856a;
+  }
+  
+  .day-3{
+    background-image: url("day-3.jpg");
+  }
+  
+  .day{
+    text-align: center;
+    /* Just so shapes stay in relation to day section */
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .day .container{
+    /* container will appear on top of shapes*/
+    position: relative;
+    z-index: 2;
+  }
+  
+  .date{
+    font-size: 28px;
+    color: #ffeecf;
+    margin-bottom: 48px;
+    line-height: 1;
+  }
+  
+  .lineup h2{
+    font-size: 56px;
+    line-height: 1;
+    margin-bottom: 6px;
+  }
+  
+  .lineup p{
+    margin-bottom: 24px;
+  }
+  
+  .scroll-to {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 3vh;
+    width: 64px;
+    height: 32px;
+    background-image: url("down-arrow.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+  
+  .scroll-to-intro{
+    background-image: url("down-arrow-light.svg");
+  }
+  
+  @media (media-width:640){
+  
+    .marquee{
+      position: relative;
+      top: auto;
+      left: auto;
+      width: 90vw;
+      margin-bottom: 24px;
+    }
+  
+    .logo{
+      max-width: 64px;
+      margin-bottom: 24px;
+    }
+  
+    .intro p{
+      font-size: 20px;
+    }
+  
+    .scroll-to{
+      display: none;
+    }
+  
+    .lineup h2{
+      font-size: 30px;
+    }
+  }

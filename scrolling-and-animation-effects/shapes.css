@@ -1,0 +1,84 @@
+.shape{
+    position: absolute;
+    
+  }
+  
+  
+  @keyframes pulse{
+    0%{
+      transform: scale(1);
+    }
+    50%{
+      transform: scale(1.2);
+    }
+    100%{
+      transform: scale(1);
+    }
+  }
+  
+  .circle{
+    animation: pulse 3s infinite;
+    height: 94px;
+    width: 94px;
+    background-color: rgb(219, 157, 157);
+    top: 10%;
+    left: 10%;
+    border-radius: 100%;
+  }
+  
+  /* Selecting 2nd item of the .circle series */
+  .circle:nth-child(2){
+    left: 90%;
+    top: 40%;
+  }
+  
+  .circle:nth-child(3){
+    left: 20%;
+    top: 25%;
+  }
+  
+  .squiggle{
+    width: 304px;
+    height: 64px;
+    background-image: url("squiggle.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    /* It contains the image inside the edges of the box*/
+    background-size: contain;
+  }
+  
+  .squiggle:nth-child(2){
+    left: 90%;
+    top: 40%;
+  }
+  
+  .squiggle:nth-child(3){
+    left: 20%;
+    top: 25%;
+  }
+  
+  .squiggle:nth-child(4){
+    left: 50%;
+    top: 50%;
+  }
+  
+  .squiggle:nth-child(5){
+    left: 80%;
+    top: 60%;
+  }
+  
+  .squiggle:nth-child(6){
+    left: 40%;
+    top: 70%;
+  }
+  
+  .squiggle:nth-child(7){
+    left: 70%;
+    top: 80%;
+  }
+  
+  .squiggle:nth-child(8){
+    left: 30%;
+    top: 90%;
+  }
+  

@@ -1,0 +1,186 @@
+body {
+  font-family: Work Sans;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #fff;
+  background-color: #000;
+	/* we add some padding top to create the space
+  for our fixed header to sit inside of */
+  padding-top: 104px;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+header {
+/*   overflow: hidden; */
+  
+  position: fixed;
+  top: 0;
+  left: 0;
+  
+  width: 100%;
+  padding: 20px;
+	/* flexbox is a modern css layout mode that gives us
+  much more power over how elements are positioned */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+	/* z-index allows us to control the order of elements stacking
+  on top of each other. it only really matters when using
+  fixed/absolute positioning because elements get taken onto 
+  separate layers */
+  z-index: 2;
+}
+
+header h1 {
+/*   float: left; */
+  width: 64px;
+}
+
+header nav {
+/*   float: right; */
+/*   margin-top: 20px; */
+}
+
+header nav a {
+  margin-left: 10px;
+}
+
+.selected {
+  border-bottom: solid 2px #fff;
+  padding-bottom: 3px;
+}
+
+.photos {
+/*   text-align: center; */
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 10px;
+  padding-right: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.photo {
+	/* inline block gives us a the best of both inline and block
+  elements allowing us to stack them side by side and also 
+  align our elements vertically in the row*/
+/*   display: inline-block; */
+  width:  320px;
+  margin: 10px;
+	/* we can use vertical align to align or rows to bottom/middle/top   */
+	/* vertical-align: top; */
+	/* by using position relative on the parent photo element, our
+  overlay will be positioned in relation to it */
+  position: relative;
+}
+
+.overlay {
+	/* by using absolute position we can posotion things in relation
+  to the page or other parent elements */
+  position: absolute;
+  top: 0;
+  left: 0;
+  
+  width: 100%;
+  height: 100%;
+	/* we can specify colours using rgb values, and in this case 
+  we can also control the 'alpha' channel which is for transparency */
+  background-color: rgba(0, 0, 0, 0.7);
+  
+  opacity: 0;
+	
+  transition: opacity 0.3s;
+}
+
+.photo:hover .overlay {
+  opacity: 1;
+}
+
+.photo h2 {
+  position: absolute;
+  left: -15px;
+  top: -15px;
+  font-size: 32px;
+  line-height: 1.2;
+}
+
+
+.small {
+  width: 220px;
+}
+
+.large {
+  width: 400px;
+}
+
+footer {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer nav a {
+  width: 16px;
+  margin-left: 5px;
+  display: inline-block;
+}
+
+.list {
+  max-width: 640px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 48px;
+  line-height: 1.2;
+  margin-top: 120px;
+}
+
+.list a img {
+  opacity: 0;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 500px;
+  
+  /* is this will tell the browser to ignore any default mouse 
+  interactions on this img element */
+  pointer-events: none;
+
+  transition: opacity 0.3s;
+}
+
+/* this is a pseudo element that allows us to insert content 
+before and after an element */
+.list a:after {
+  content: '/';
+}
+
+/* but not the last one! */
+.list a:last-child:after {
+  content: '';
+}
+
+.list a:hover img {
+  opacity: 1;
+}
+
+.list a {
+  transition: color 0.3s;
+}
+
+.list:hover a {
+  color: #4d4d4d;
+}
+
+.list a:hover {
+  color: #fff;
+}

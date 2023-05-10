@@ -1,0 +1,12 @@
+/* This will be suitable for wider screens */
+@media (min-width: 640px) {
+
+
+    .shape,
+    .lineup li,
+    .date {
+      opacity: 0;
+      transition: opacity 0.5s ease;
+    }
+    
+  }

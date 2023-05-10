@@ -1,0 +1,161 @@
+body {
+  font-family: Roboto;
+  font-size: 16px;
+  /* line-height: will be equal to 24px (16*1.5) */
+  line-height: 1.5;
+  color: #47353A;
+}
+
+header{
+  padding: 10px 15px;
+  /* When we float elements inside of our header, they are taken outside
+  the regular box flow of the page and as a regular our header collapses
+  
+  to get our header to have its proper height again, we can use overflow: hidden
+  as a trick to get it working;
+  */
+  overflow: hidden;
+
+}
+
+header h1{
+  float: left;
+
+}
+
+header nav {
+  float: right;
+  margin-top: 3px;
+}
+
+header nav a {
+  color: #47353A;
+  text-decoration: none;
+  margin: 15px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.hero {
+  background-image: url("hero.jpg");
+  background-size: cover;
+  padding-top: 230px;
+  padding-bottom: 200px;
+  background-position: right center;
+}
+
+.hero div{
+  max-width: 520px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.hero h2{
+  font-family: David Libre;
+  font-size: 64px;
+  line-height: 1;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.flowers{
+  overflow: hidden;
+}
+.flowers img{
+  float:left;
+  width: 33.333%;
+}
+
+.quotes{
+  overflow: hidden;
+}
+
+.quotes div{
+  width: 50%;
+  float:left;
+  text-align: center;
+  padding: 50px 20px 40px 20px;
+}
+
+.cream {
+  background-color: #F7F1EE;
+}
+
+.quotes img{
+  width: 75px;
+  margin-bottom: 10px;
+  border-radius: 100%;
+}
+
+.quotes blockquote{
+  font-family: David Libre;
+  font-size: 24px;
+  line-height: 1.15;
+  font-weight: 700;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.chair{
+  background-image: url("full-bleed.jpg");
+  background-position: center bottom;
+  padding: 0;
+  height: 500px;
+}
+
+.logos{
+  background-color: #EEAE9F;
+  padding: 20px 20px 35px 20px;
+  text-align: center;
+}
+
+.logos p{
+  color: #fff;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.logos img{
+  margin-left: 22px;
+  marging-right: 22px;
+}
+
+footer{
+  background-color: #47353A;
+  overflow: hidden;
+}
+
+footer img{
+  float: left;
+}
+
+footer p{
+  float: right;
+  font-size: 14px;
+  color: #CCC9CA;
+  font-weight: 700;
+}
+
+@media(min-width: 820px){
+  header{
+    position:fixed;
+    background-color: #fff;
+    width: 100%;
+    top:0;
+    left:0;
+    box-shadow: 0 1px 5px 0px rgba(red, green, blue, alpha);
+  }
+
+  .hero{
+    margin-top: 50px;
+  }
+}

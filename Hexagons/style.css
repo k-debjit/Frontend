@@ -1,0 +1,151 @@
+body {
+    font-family: Roboto;
+    font-size: 18px;
+    line-height: 1.5;
+    color: #000;
+    background-color: #f4f4f4;
+  }
+  
+  header nav a {
+    text-decoration: none;
+    color: #000;
+    margin-left: 20px;
+    margin-right: 20px;
+    border-bottom: solid transparent 1px;
+    padding-bottom: 4px;
+  }
+  
+  header nav a:hover {
+    border-bottom: solid black 1px;
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .hero {
+    /*
+      to scoot it behind the header, 
+      we can give the hero section a negative margin-top value 
+      that’s equal to the height of the header.
+      */
+    margin-top: -60px;
+    /*
+      z-index only works for elements that are not static.Every element has a static position by default, 
+      so the z-index works only if you give the element a position that is not static.In this case, 
+      we will be giving the hero a position of relative
+      */
+    position: relative;
+    z-index: -1;
+  }
+  
+  .about {
+    background-color: #f9dbd7;
+    display: flex;
+    color: Blue;
+    margin-bottom: 60px;
+  }
+  
+  .about div {
+    max-width: 50%;
+  }
+  
+  .guitar {
+    border: solid royalblue 40px;
+  }
+  
+  .info h2 {
+    font-size: 40px;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+  
+  .info p {
+    max-width: 600px;
+    margin-bottom: 16px;
+  }
+  
+  .store {
+    margin-bottom: ;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 80px;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: black;
+  }
+  
+  .container h1 {
+    font-size: 40px;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+  
+  .container a {
+    text-decoration: none;
+    color: black;
+    margin-right: 20px;
+  }
+  
+  .container nav {
+    margin-bottom: 20px;
+  }
+  
+  .filter li{
+    display: inline;
+  }
+  
+  .selected {
+    border-bottom: solid blue 2px;
+    padding-bottom: 2px;
+  }
+  
+  .container .photos {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .photos .slide {
+    max-width: 33.333%;
+    position: relative;
+  }
+  
+  .overlay {
+    position: absolute;
+    opacity: 0;
+    background-color: rgba(0, 0, 255, 0.549);
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .overlay h4{
+    position: absolute;
+    top: 110px;
+    left: 90px;
+  }
+  
+  .overlay p{
+    position: absolute;
+    top: 130px;
+    left: 100px;
+  }
+  
+  .slide:hover .overlay{
+    opacity: 1;
+  }
+  
+  footer{
+    width: 100%;
+    height: 100%;
+    background-color: blue;
+    padding-bottom: 20px;
+  }

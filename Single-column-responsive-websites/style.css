@@ -1,0 +1,98 @@
+body {
+  font-family: Lora;
+  font-size:  18px;
+  line-height: 1.5;
+  /* line-height acts as a multiplier of the font-size(in this case it would be 18*1.5= 27px)*/
+  color: #ffffff;
+  /* by default background images tile/repeat across the whole background of an element, which is this case is desirable */
+  background-image: url(background.svg);
+  /* this will make our page width fulid up until it reaches 640px width and then it will stop growing. This is an easy
+  way to make websites responsive by default*/
+  max-width: 640px;
+  /* By using auto margins, our column of content is centered on the page*/
+  margin-left:  auto;
+  margin-right:  auto;
+  padding-top: 40px;
+}
+header{
+  background-color: #ffffff;
+  padding: 40px;
+}
+nav{
+  background-color: #e23f12;
+  padding:  20px 40px 20px 40px;
+}
+nav a{
+  color: #ffffff;
+  text-decoration: none;
+  margin-right: 15px;
+}
+/* these styles will get applied when we hover over each nav link*/
+nav a:hover{
+  color: #5000ff;
+  border-bottom: solid 2px #ffffff;
+}
+section{
+  background-color: #5000ff;
+  Padding: 40px;
+}
+h2{
+  font-size: 32px;
+  /*line-height gets added in equal measure to the top and the bottom of text in css*/
+  line-height: 1.2;
+}
+/* these styles will get applied to any elements in out html with a class of 'image'*/
+.image {
+  padding: 0;
+}
+blockquote {
+  font-size:  32px;
+  line-height: 1.2;
+  font-style: italic;
+  margin-top:  40px;
+  margin-bottom: 40px;
+}
+.map {
+  width: 100%;
+  margin-top: 20px;
+}
+.contact p{
+  margin-top: 20px;
+}
+.contact a{
+  color: #ffffff;
+  text-decoration: none;
+  border-bottom:  solid 2px #f05d5d;
+  padding-bottom: 1px;
+}
+/* when our screen width is below 740px, these styles will be applied which is an extremely powerful feature of css. it allows 
+us to conditionally apply styles at certail widths - this is called a media query */
+@media(max-width: 720px){
+  /* these styles will be applied to both the section and header*/
+  section,header {
+    padding: 20px;
+  }
+  nav{
+    padding:  10px 20px 10px 20px;
+  }
+  h2,blockquote{
+    font-size: 24px;
+  }
+  body{
+    padding-top: 0;
+    font-size: 16px;
+  }
+  nav a{
+    /* this will force our navigation links to stack on top of each other 
+    (a bit like header, section and nav elements)*/
+    display: block;
+  }
+  /*This will remove the border on mobile*/
+  nav a:hover{
+    border: none;
+  }
+  blockquote{
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+}

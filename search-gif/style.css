@@ -1,0 +1,56 @@
+body {
+    background-color: #000;
+    color: #fff;
+    font-family: 'helvetica neue', sans-serif;
+    font-size: 24px;
+    line-height: 1.5;
+    padding: 5vh 3vw;
+    /* padding will be linked to the screen size*/
+    font-weight: bold;
+    /* body tag by default is only as tall as its content, so here we stretch it out*/
+    min-height: 100vh;
+    /* enable flex box to stack boxes side by side by default*/
+    display: flex ;
+    /*boxes to stack on top of each other*/
+    flex-direction: column;
+    /*boxes to spread out and fill the available space and create the gaps between them*/
+    justify-content: space-between;
+  }
+  
+  .top,
+  .middle,
+  .indicators {
+    text-align: center;
+    position: relative;
+  }
+  
+  input{
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    outline: none;
+    text-align: center;
+  }
+  
+  .search-input{
+    font-size: 72px;
+  }
+  
+  /* this styles up placeholder text on our input*/
+  .search-input::placeholder{
+    color: #323232;
+  }
+  
+  
+  .search-clear,
+  .spinner {
+    transition: opacity 0.5s ease;
+    opacity: 0;
+    /*so that mouse cannot interact*/
+    pointer-events: none;
+  }
+  
+  .search-clear{
+    /* gives us a pointer hand to show that its interactive*/
+    cursor: pointer;
+  }

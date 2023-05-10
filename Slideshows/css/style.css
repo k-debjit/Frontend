@@ -1,0 +1,91 @@
+body {
+  font-family: Work Sans;
+  font-size: 32px;
+  line-height: 1.5;
+  background: #000000;
+  color: #ffffff;
+}
+
+.slideshow {
+  position: relative;
+  /* By default Overflow is visible.
+  By hiding overflow we can chop off content
+  which may hang outside of parent box*/
+  overflow: hidden;
+  /*100vw and 100vh takes full width and height of
+  the viewport window*/
+  width: 100vw;
+  height: 100vh;
+}
+
+.holder {
+  position: relative;
+  top: 0;
+  /* we will move .holder further left
+  by 100vw to show new image through javascript*/
+  left: 0;
+  /* holder width is much wider than slideshow div as
+  .holder is containing all the photo side by side*/
+  width: 10000vw;
+  height: 100vh;
+  transition: left 1s;
+}
+
+/*We can have more control on background image
+rather than main content*/
+.holder div {
+  float: left;
+  width: 100vw;
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 20px 30px;
+}
+
+.slide-1 {
+  background-image: url(boyce_1.jpg);
+}
+
+.slide-2 {
+  background-image: url(boyce_2.jpg);
+}
+
+.slide-3 {
+  background-image: url(boyce_3.jpg);
+}
+
+.slide-4 {
+  background-image: url(boyce_4.jpg);
+}
+
+.slide-5 {
+  background-image: url(boyce_5.jpg);
+}
+
+.steps {
+  position: absolute;
+  bottom: 30px;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  text-align: center;
+}
+
+a {
+  color: white;
+  padding: 20px 30px;
+  position: absolute;
+  bottom: 0;
+  text-decoration: none;
+  z-index: 1;
+}
+
+.prev {
+  left: 0;
+}
+
+.next {
+  right: 0;
+}
+

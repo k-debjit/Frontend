@@ -1,0 +1,38 @@
+body {
+    font-family: Italiana;
+    font-size: 24px;
+  
+  }
+  section {
+    height: 100vh;
+    background-image: url('the-pen.svg');
+    background-size: cover;
+    background-attachment: fixed;
+  }
+  .img2 {
+    background-image: url('is-mightier.svg');
+    background-color: black;
+  }
+  .img3 {
+    background-image: url('than.svg');
+  }
+  .img4 {
+    background-image: url('the-sword.svg');
+    background-color: black;
+  }
+  .img5 {
+    background-image: url('end.svg');
+    background-color: greenyellow;
+  }
+  footer {
+    bottom: 20px;
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    background-color: greenyellow;
+  }
+  footer img{
+    width: 40px;
+  }
+  
+  
